@@ -9,6 +9,14 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
 
+const db = mongoose.connection
+db.on('error', (error) => {
+  console.log(error)
+})
+db.once('open', () => {
+  console.log('Connected to MongoDB')
+})
+
 var index = require('./routes/index');
 
 
@@ -31,8 +39,8 @@ app.use('/', index);
 const brandController = require('./routes/brandController.js')
 app.use('/brands', brandController)
 
-const cameraController = require('./routes/cameraController.js')
-app.use('/brands/:companyId/cameras', cameraController)
+// const cameraController = require('./routes/cameraController.js')
+// app.use('/brands/:companyId/cameras', cameraController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

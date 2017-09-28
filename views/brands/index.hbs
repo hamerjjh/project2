@@ -1,0 +1,5 @@
+{{#each brands}}
+    <div>
+        {{this.name}} - {{this.country}}
+        <a href="/brands/{{this._id}}/cameras">{{this.name}}'s Cameras</a>    </div>
+    {{/each}}

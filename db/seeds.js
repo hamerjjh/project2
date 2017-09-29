@@ -24,9 +24,9 @@ BrandModel.remove({}, function (err) {
     console.log(err);
 });
 
-const nikon = new BrandModel({ name: 'Nikon', country: 'Japan'})
-const canon = new BrandModel({ name: 'Canon', country: 'Japan'})
-const sony = new BrandModel({ name: 'Sony', country: 'Japan'})
+const nikon = new BrandModel({ name: 'Nikon', founder: 'Nippon Kōgaku'})
+const canon = new BrandModel({ name: 'Canon', founder: 'Takeshi Mitarai'})
+const sony = new BrandModel({ name: 'Sony', founder: 'Masaru Ibuka'})
 
 const d850 = new CameraModel({ name: 'D850', price: 3299.95, color: 'black', lensSize: 80}) 
 const d610 = new CameraModel({ name: 'D610', price: 1499.95, color: 'red', lensSize: 55}) 

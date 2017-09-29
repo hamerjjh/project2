@@ -28,7 +28,7 @@ const BrandSchema = new Schema({
         required: true,
         unique: true
     },
-    country: {
+    founder: {
         type: String,
         required: true
     },

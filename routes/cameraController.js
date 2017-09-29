@@ -119,6 +119,8 @@ router.put('/:cameraId', (req, res) => {
             // the same attribute on the original camera
             camera.name = updatedCamera.name
             camera.price = updatedCamera.price
+            camera.color= updatedCamera.color
+            camera.lensSize = updatedCamera.lensSize
 
             // SAVE the updated brand and return the PROMISE
             return brand.save()

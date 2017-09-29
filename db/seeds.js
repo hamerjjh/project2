@@ -32,13 +32,25 @@ const d850 = new CameraModel({ name: 'D850', price: 3299.95, color: 'black', len
 const d610 = new CameraModel({ name: 'D610', price: 1499.95, color: 'red', lensSize: 55}) 
 const d5 = new CameraModel({ name: 'D5', price: 6499.95, color: 'blue', lensSize: 90}) 
 
+const eos1D = new CameraModel({ name: 'EOS1D', price: 5999.00, color: 'black', lensSize: 90}) 
+const eos5D = new CameraModel({ name: 'EOS5D', price: 3699.95, color: 'silver', lensSize: 55}) 
+const eos6D = new CameraModel({ name: 'EOS6D', price: 3099.00, color: 'blue', lensSize: 30}) 
+
+const a9 = new CameraModel({ name: 'A9', price: 4999.00, color: 'black', lensSize: 80}) 
+const a7R = new CameraModel({ name: 'A7R', price: 2699.99, color: 'black', lensSize: 60}) 
+const a5000 = new CameraModel({ name: 'A5000', price: 499.00, color: 'white', lensSize: 25}) 
+
 const brands = [nikon, canon, sony]
 const cameras = [d850, d610, d5]
+const cameras2 = [eos1D, eos5D, eos6D]
+const cameras3 = [a9, a7R, a5000]
 
 // assign cameras to each brand.
 brands.forEach((brand) => {
     
-        brand.cameras = cameras
+        nikon.cameras = cameras
+        canon.cameras = cameras2
+        sony.cameras = cameras3
     
         brand.save()
             .then((brand) => {

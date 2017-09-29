@@ -16,14 +16,14 @@ router.get('/', (req, res) => {
 })
 // NEW route
 router.get('/new', (req, res) => {
-    // RENDER an empty form for the new company
+    // RENDER an empty form for the new brand
  res.render('brands/new')
 })
 
 // CREATE route
 router.post('/', (req, res) => {
 
-    // GRAB the new company info as a JS object from the req body
+    // GRAB the new brand info as a JS object from the req body
     const newBrand = req.body
 
     // CREATE and SAVE a new Brand using the BrandModel

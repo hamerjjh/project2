@@ -1,0 +1,18 @@
+<div>
+    <h1>{{brand.name}}'s Cameras</h1>
+
+    <div>
+        <a href="/brands/{{brand._id}}/cameras/new">Create a New Camera</a>
+    </div>
+
+    <div>
+        <a href="/brands">Back to Brands</a>
+    </div>
+    
+    {{#each brand.cameras}}
+        <div>
+            {{this.name}} - {{this.price}}
+            <a href="/brands/{{../brand._id}}/brands/{{this._id}}">View</a>
+        </div>
+    {{/each}}
+</div>

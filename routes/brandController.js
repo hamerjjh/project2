@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
     // CREATE and SAVE a new Brand using the BrandModel
     BrandModel.create(newBrand)
         .then(() => {
-            // THEN once the model has saved, redirect to the Companies INDEX
+            // THEN once the model has saved, redirect to the Brands INDEX
          res.redirect('/brands')
         })
         .catch((error) => {

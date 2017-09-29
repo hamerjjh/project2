@@ -32,7 +32,7 @@ const BrandSchema = new Schema({
         type: String,
         required: true
     },
-    camera: [CameraSchema]
+    cameras: [CameraSchema]
 });
 
 const BrandModel = mongoose.model('Brand', BrandSchema)

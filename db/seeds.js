@@ -28,9 +28,9 @@ const nikon = new BrandModel({ name: 'Nikon', country: 'Japan'})
 const canon = new BrandModel({ name: 'Canon', country: 'Japan'})
 const sony = new BrandModel({ name: 'Sony', country: 'Japan'})
 
-const d850 = new CameraModel({ name: 'D850', price: 3299.95}) 
-const d610 = new CameraModel({ name: 'D610', price: 1499.95}) 
-const d5 = new CameraModel({ name: 'D5', price: 6499.95}) 
+const d850 = new CameraModel({ name: 'D850', price: 3299.95, color: 'black', lensSize: 80}) 
+const d610 = new CameraModel({ name: 'D610', price: 1499.95, color: 'red', lensSize: 55}) 
+const d5 = new CameraModel({ name: 'D5', price: 6499.95, color: 'blue', lensSize: 90}) 
 
 const brands = [nikon, canon, sony]
 const cameras = [d850, d610, d5]

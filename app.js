@@ -7,6 +7,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+const methodOverride = require('method-override')
+
+mongoose.Promise = global.Promise
 mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
 
 const db = mongoose.connection
@@ -17,10 +20,11 @@ db.once('open', () => {
   console.log('Connected to MongoDB')
 })
 
-var index = require('./routes/index');
+//var index = require('./routes/index');
 
 
 var app = express();
+app.use(methodOverride('_method'))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,13 +38,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+//app.use('/', index);
 
-const brandController = require('./routes/brandController.js')
+// Register Controllers
+var indexController = require('./routes/indexController');
+app.use('/', indexController);
+
+const brandController = require('./routes/brandController')
 app.use('/brands', brandController)
 
-// const cameraController = require('./routes/cameraController.js')
-// app.use('/brands/:companyId/cameras', cameraController)
+const cameraController = require('./routes/cameraController')
+app.use('/brands/:brandId/cameras', cameraController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

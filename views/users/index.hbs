@@ -1,0 +1,16 @@
+<div>
+    <h1>Users</h1>
+
+    <h2>Enter Info to Create User:</h2>
+    <div>
+        <a href="/users/new">Add A New User</a>
+    </div>
+    {{#each users}}
+        <div class="users">
+            User: {{this.name}} 
+            <br>
+            <a href="/users/{{this._id}}">{{this.name}} Info</a>
+            <br>
+        </div>
+    {{/each}}
+</div>

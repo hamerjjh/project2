@@ -1,0 +1,19 @@
+<div>
+    <h1>{{user.name}}'s User Info</h1>
+    <div class='user-info'>
+        Name: {{user.name}}
+        <br>
+        Email: {{user.email}}
+
+    </div>
+
+    <div>
+        <a href="/users">Back to Users</a>
+    </div>
+    <div>
+        <a href="/users/{{brand._id}}/edit">Edit</a>
+    </div>
+    <div>
+        <a href="/users/{{brand._id}}/delete">Delete</a>
+    </div>
+</div>

@@ -88,3 +88,36 @@ a {
 .create-camera {
   text-align: center;
 }
+.users {
+  text-align: center;
+	display: inline-block;
+	width:85%;
+	background: white;
+    border: 1px solid #B9D6C2;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    margin-left: 170px;
+    border-radius: 50px;
+    padding: 2em;
+    position: relative;
+    min-width: 340px;
+    max-width:800px;
+}
+.user-info {
+  text-align: center;
+	display: inline-block;
+	width:85%;
+	background: white;
+    border: 1px solid #B9D6C2;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    margin-left: 170px;
+    border-radius: 50px;
+    padding: 2em;
+    position: relative;
+    min-width: 340px;
+    max-width:800px;
+}
+.new-user {
+  text-align: center;
+}

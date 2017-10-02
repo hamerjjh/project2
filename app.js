@@ -42,6 +42,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Register Controllers
 var indexController = require('./routes/indexController');
+
+
 app.use('/', indexController);
 
 const brandController = require('./routes/brandController')
@@ -49,6 +51,9 @@ app.use('/brands', brandController)
 
 const cameraController = require('./routes/cameraController')
 app.use('/brands/:brandId/cameras', cameraController)
+
+const userController = require('./routes/userController')
+app.use('/users', userController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

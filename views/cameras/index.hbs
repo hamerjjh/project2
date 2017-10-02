@@ -11,7 +11,8 @@
     
     {{#each brand.cameras}}
         <div class="camera-list">
-           Camera: {{this.name}} - Price: {{this.price}}
+           Camera: {{this.name}}
+           <br>
             <a href="/brands/{{../brand._id}}/cameras/{{this._id}}">Check Out Camera</a>
         </div>
     {{/each}}

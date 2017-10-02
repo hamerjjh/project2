@@ -1,0 +1,15 @@
+<h1>Edit User</h1>
+<div class='edit-user'>
+<form action="/users/{{user._id}}?_method=PUT" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" value="{{user.name}}">
+
+    <label for="email">Email</label>
+    <input type="text" name="email" value="{{user.email}}">
+
+
+    <input type="submit" value="Edit">
+</form>
+
+<a href="/users/{{user._id}}">Back to User</a>
+</div>

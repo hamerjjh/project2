@@ -62,6 +62,13 @@ brands.forEach((brand) => {
             .catch((error) => {
                 console.log(error)
             })
+         brand.save()
+            .then((user) => {
+                console.log(`${user.name} saved!`)
+            })
+            .catch((error) => {
+                console.log(error)
+            })    
     });
     
     // Disconnect from database

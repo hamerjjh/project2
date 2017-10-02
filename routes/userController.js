@@ -65,5 +65,33 @@ router.put('/:userId', (req, res) => {
             })
     })
 // SHOW route
+router.get('/:userId', (req, res) => {
+    
+        const userId = req.params.userId
+    
+        UserModel.findById(userId)
+            .then((user) => {
+    
+             res.render('users/show', {
+                    user: user
+                })
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    })
 // DELETE route
+router.get('/:userId/delete', (req, res) => {
+    
+        const userId = req.params.userId
+
+        UserModel.findByIdAndRemove(userId)
+            .then(() => {
+
+             res.redirect('/users')
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    })
 module.exports = router;

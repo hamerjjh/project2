@@ -10,7 +10,7 @@
     </div>
     
     {{#each brand.cameras}}
-        <div>
+        <div class="camera-list">
            Camera: {{this.name}} - Price: {{this.price}}
             <a href="/brands/{{../brand._id}}/cameras/{{this._id}}">Check Out Camera</a>
         </div>

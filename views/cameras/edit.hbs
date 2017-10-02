@@ -1,3 +1,6 @@
+<h1> Customize {{camera.name}} </h1>
+
+<div class = "camera-edit">
 <form action="/brands/{{brandId}}/cameras/{{camera._id}}?_method=PUT" method="POST">
     <label for="name">Name</label>
     <input type="text" name="name" value="{{camera.name}}">
@@ -13,3 +16,6 @@
 
     <input type="submit" value="Edit">
 </form>
+
+<a href="/brands/{{brandId}}/cameras/{{camera._id}}">Return to Camera</a>
+</div>

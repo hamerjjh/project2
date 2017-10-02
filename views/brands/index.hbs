@@ -1,14 +1,18 @@
 <div>
     <h1>Customized Cameras</h1>
 
-    <h3>Brands:</h3>
+    <h2>The Big Baller Brands of Cameras:</h2>
     <div>
-        <a href="/brands/new">Add New Brand</a>
+        <a href="/brands/new">Add A New Big Baller Brand</a>
     </div>
     {{#each brands}}
-        <div>
-            Brand: {{this.name}} - Founder: {{this.founder}}
+        <div class="brands">
+            Brand: {{this.name}} 
+            <br>
+            Founder: {{this.founder}}
+            <br>
             <a href="/brands/{{this._id}}">{{this.name}} Info</a>
+            <br>
             <a href="/brands/{{this._id}}/cameras">{{this.name}}'s Cameras</a>
         </div>
     {{/each}}

@@ -19,14 +19,15 @@ db.once('open', function () {
 
 var BrandModel = Schema.BrandModel;
 var CameraModel = Schema.CameraModel;
+var UserModel = Schema.UserModel;
 
 BrandModel.remove({}, function (err) {
     console.log(err);
 });
 
-const nikon = new BrandModel({ name: 'Nikon', founder: 'Nippon Kōgaku'})
-const canon = new BrandModel({ name: 'Canon', founder: 'Takeshi Mitarai'})
-const sony = new BrandModel({ name: 'Sony', founder: 'Masaru Ibuka'})
+const nikon = new BrandModel({ name: 'Nikon', founder: 'Nippon Kōgaku', stockSymbol: 'TYO'})
+const canon = new BrandModel({ name: 'Canon', founder: 'Takeshi Mitarai', stockSymbol: 'CAJ'})
+const sony = new BrandModel({ name: 'Sony', founder: 'Masaru Ibuka', stockSymbol: 'SNE'})
 
 const d850 = new CameraModel({ name: 'D850', price: 3299.95, color: 'black', lensSize: 80}) 
 const d610 = new CameraModel({ name: 'D610', price: 1499.95, color: 'red', lensSize: 55}) 
@@ -44,6 +45,8 @@ const brands = [nikon, canon, sony]
 const cameras = [d850, d610, d5]
 const cameras2 = [eos1D, eos5D, eos6D]
 const cameras3 = [a9, a7R, a5000]
+
+const jonathan = new UserModel({ name: 'jonathan', email: 'jonathan@gmail.com'})
 
 // assign cameras to each brand.
 brands.forEach((brand) => {

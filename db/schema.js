@@ -32,13 +32,30 @@ const BrandSchema = new Schema({
         type: String,
         required: true
     },
+    stockSymbol: {
+        type: String,
+        required: true
+    },
     cameras: [CameraSchema]
 });
 
+const UserSchema = new Schema ({
+    name: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true
+    }
+})
+
 const BrandModel = mongoose.model('Brand', BrandSchema)
 const CameraModel = mongoose.model('Camera', CameraSchema)
+const UserModel = mongoose.model('User', UserSchema)
 
 module.exports = {
     BrandModel: BrandModel,
-    CameraModel: CameraModel
+    CameraModel: CameraModel,
+    UserModel: UserModel
 }

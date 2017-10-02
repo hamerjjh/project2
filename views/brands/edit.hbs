@@ -1,3 +1,5 @@
+<h1>Edit Brand</h1>
+<div class='edit-brand'>
 <form action="/brands/{{brand._id}}?_method=PUT" method="POST">
     <label for="name">Name</label>
     <input type="text" name="name" value="{{brand.name}}">
@@ -5,5 +7,12 @@
     <label for="founder">Founder</label>
     <input type="text" name="founder" value="{{brand.founder}}">
 
+    <label for="stockSymbol">Stock Symbol</label>
+    <input type="text" name="stockSymbol" value="{{brand.stockSymbol}}">
+
+
     <input type="submit" value="Edit">
 </form>
+
+<a href="/brands/{{brand._id}}">Back to Brand</a>
+</div>

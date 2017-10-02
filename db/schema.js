@@ -19,6 +19,10 @@ const CameraSchema = new Schema({
     lensSize: {
         type: Number,
         required: true
+    },
+    img: {
+        type: String,
+        required: true
     }
 })
 

@@ -33,9 +33,9 @@ const nikon = new BrandModel({ name: 'Nikon', founder: 'Nippon Kōgaku', stockSy
 const canon = new BrandModel({ name: 'Canon', founder: 'Takeshi Mitarai', stockSymbol: 'CAJ' })
 const sony = new BrandModel({ name: 'Sony', founder: 'Masaru Ibuka', stockSymbol: 'SNE' })
 
-const d850 = new CameraModel({ name: 'D850', price: 3299.95, color: 'black', lensSize: 80 })
-const d610 = new CameraModel({ name: 'D610', price: 1499.95, color: 'red', lensSize: 55 })
-const d5 = new CameraModel({ name: 'D5', price: 6499.95, color: 'blue', lensSize: 90 })
+const d850 = new CameraModel({ name: 'D850', price: 3299.95, color: 'black', lensSize: 80, img: 'http://www.imaging-resource.com/PRODS/nikon-d850/ZPR-NIKON-D850-FRONTTOP.JPG' })
+const d610 = new CameraModel({ name: 'D610', price: 1499.95, color: 'red', lensSize: 55, img: 'http://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-YRYNeYvAi9beHK4x3L-8lV4CqGLVFAg8lKTQmfnfaYyZ2FxMB5sPG/Views/1540-D610-left.png' })
+const d5 = new CameraModel({ name: 'D5', price: 6499.95, color: 'blue', lensSize: 90, img: 'http://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-YRYNeYvAi9beHK4x3L-8go_p7JUL6JpQM6WyXrFyHmN6DEWbHDTIZZR0t9czKSPg=/Views/1557_D5_left.png' })
 
 const eos1D = new CameraModel({ name: 'EOS1D', price: 5999.00, color: 'black', lensSize: 90 })
 const eos5D = new CameraModel({ name: 'EOS5D', price: 3699.95, color: 'silver', lensSize: 55 })

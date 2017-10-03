@@ -54,7 +54,12 @@ router.post('/', (req, res) => {
         .then((brand) => {
             // THEN once you have found the brand from the database
             // PUSH the new snowboard object into the brand's 
-            // snowboard array            
+            // snowboard array        
+            console.log(newCamera)    
+            if (!newCamera.img){
+                delete newCamera.img
+            }
+            console.log(newCamera)
             brand.cameras.push(newCamera)
 
             // SAVE the brand and return the PROMISE

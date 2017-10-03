@@ -124,7 +124,12 @@ a {
 .edit-user{
   text-align: center;
 }
-.picture {
+/* .picture {
+  float: left;
+  width: 300px;
+  height: 300px;
+} */
+.img {
   float: left;
   width: 300px;
   height: 300px;

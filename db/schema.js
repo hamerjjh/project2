@@ -22,7 +22,7 @@ const CameraSchema = new Schema({
     },
     img: {
         type: String,
-        required: true
+        default:'https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX9858344.jpg'
     }
 })
 

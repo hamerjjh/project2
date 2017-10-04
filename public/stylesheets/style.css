@@ -1,12 +1,13 @@
 h1 {
   text-align: center;
+  position: flex;
 }
 
 
 
 body {
   background: lightcyan;
-	font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 a {
@@ -31,7 +32,7 @@ a {
 }
 .companyinfo {
   text-align: center;
-	display: inline-block;
+  display: inline-block;
 	width:85%;
 	background: white;
     border: 1px solid #B9D6C2;
@@ -52,7 +53,7 @@ a {
 }
 .camera-list {
   text-align: center;
-	display: inline-block;
+  display: inline-block;
 	width:85%;
 	background: white;
     border: 1px solid #B9D6C2;
@@ -69,7 +70,7 @@ a {
 .camera-container-show {
   text-align: center;
   color: red;
-	display: inline-block;
+  display: inline-block;
 	width:75%;
 	background: white;
     border: 1px solid #B9D6C2;
@@ -91,7 +92,7 @@ a {
 }
 .users {
   text-align: center;
-	display: inline-block;
+  display: inline-block;
 	width:85%;
 	background: white;
     border: 1px solid #B9D6C2;
@@ -106,7 +107,7 @@ a {
 }
 .user-info {
   text-align: center;
-	display: inline-block;
+  display: inline-block;
 	width:85%;
 	background: white;
     border: 1px solid #B9D6C2;
